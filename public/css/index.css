@@ -1,0 +1,9 @@
+
+#usernameContainer {
+	margin-top: 5ex;
+}
+
+.authInputs input {
+	width: 100%;
+	font-size: 15pt
+}
