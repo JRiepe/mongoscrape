@@ -1,106 +1,19 @@
-<!DOCTYPE html>
+
 <html lang="en">
-	<head>
-		<title>iControl Inventory Management</title>
-	<!-- Meta tags -->
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-	<!-- Jquery -->
-		<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
-	<!-- bootstrap -->
-	  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-	<!-- Materialize -->
-	  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-	
-	<!-- icons/ fonts  -->
-	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	<!-- fonts  --> 
-	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-	  <!-- <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-	  <link href='https://fonts.googleapis.com/css?family=Pridi:400,600,700' rel='stylesheet' type='text/css'>
-	  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
-	  <link href='https://fonts.googleapis.com/css?family=Hind:400,700' rel='stylesheet' type='text/css'>
-	   <link href='https://fonts.googleapis.com/css?family=Damion' rel='stylesheet' type='text/css'>
-	  <link href='https://fonts.googleapis.com/css?family=Squada+One' rel='stylesheet' type='text/css'>
-	  <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <!-- Stylesheet -->
-    <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-	<!-- Chartist -->
-	  <link rel="stylesheet" href="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.css">
-	<script src="//cdn.jsdelivr.net/chartist.js/latest/chartist.min.js"></script>
-	<!-- DC Social Icons CSS -->
-<link rel="stylesheet" type="text/css" href="http://cdn.dcodes.net/2/social_icons/dc_social_icons.css" />
+  <head>
+    <!-- Meta tags -->
+     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
+  <!-- Jquery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+  <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
-	</head>
-	<body>
-	<nav class="black" role="navigation">
-    <div class="nav-wrapper container">
-      <a id="logo-container" href="/index" class="brand-logo"><img src="../images/icLogoL_head3.png" alt="IControl" width="30px">Control</a>
-      <ul class="right hide-on-med-and-down">
-        <li>{{uName}}</li>
-        <li><a id="login" href={{logURL}}>{{loginOut}}</a></li>
-        <li><a id="login" href="/page2"> Inventory </a></li>
-        <li><a id="login" href="/page5"> Reports </a></li>
-        <!-- <li><a id="login" onclick="return myFunction('/verify')">Login</a></li> -->
-        <!-- <li><a href="/verify" id="signup">Create Account</a></li> -->
-      </ul>
-      <!-- Navagation -->
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="/verify" id="login">Login</a></li>
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 
-        <li><a href="/verify" id="signup">Create Account</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-    </div>
-  </nav>
-<!-- handlebars -->
-		{{{ body }}}
-	
-<!-- main footer on each page -->
-  <footer class="page-footer black">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12"><img src="../images/icLogoL_head2.png" alt="IControl" width="140">
-          <h5 class="white-text"></h5>
-          <p class="grey-text text-lighten-4">Designed for small business.</p>
-
-
-        </div>
-        <div class="col l3 s12">
-          <h5 class="white-text">Site Links</h5>
-          <ul>
-            <li><a class="white-text" href="/page2">Inventory</a></li>
-            <li><a class="white-text" href="/page5">Reports</a></li>
-            <li><a class="white-text" href={{logURL}}>{{loginOut}}</a></li>
-          </ul>
-        </div>
-        
-        <!-- Social Media Links -->
-        <div class="col l3 s12">
-          <h5 class="white-text">Connect</h5>
-          <ul>
-            <li id="social">
-            <a class="facebook_dgloss32 dc_dgloss_32" title="facebook" href="#">facebook</a>
-            <a class="twitter_dgloss32 dc_dgloss_32" title="twitter" href="#">twitter</a>
-            <a class="linkedin_dgloss32 dc_dgloss_32" title="linkedin" href="#">linkedin</a>
-            
-            
-          </ul>
-        </div>
-      </div>
-    </div>
-    </footer>
-	</body>
+    <title>MongoScrape App</title>
+  </head>
+  <body>
+    {{{ body }}}
+  </body>
 </HTML>
-<!-- scripts for templates -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="../js/materialize.js"></script>
-  <script src="../js/init.js"></script>
-  <script src="../js/main.js"></script>
-  <script type="text/javascript">
-      $(document).ready(function(){
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $('.modal-trigger').leanModal();
-      });  
-  </script>
