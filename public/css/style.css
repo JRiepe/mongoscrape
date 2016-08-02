@@ -24,27 +24,38 @@ html  {
 }
  
 
-input {
-  height: 100%;
-  width: 100%;
-  background-color: inherit;
-  color: #000000;
-  padding: 10px;
+ textarea {
+  margin: 0 auto;
+  min-height: 250px;
+  max-height: 250px;
+  background-color: inherit!important;
+  padding: 5px;
   border-style: none;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+  text-align: left;
+  outline: transparent !important;
 }
 
+
 .textDivs {
+  margin: 0 auto;
   text-align: center;
-  padding-top: 20px;
+  padding:  5px;
+  padding-top: 10px;
   min-height: 300px;
   max-height: 300px;
-  overflow-y: auto;
   border-style: ridge;
   border-color: #000000;
   border-width: 5px;
   background-color: #F1F1D4;
   color: #000000;
-  
+  word-break: break-all !important;
+  word-wrap: break-word !important;
+  display: block;
+  overflow-x: break-word;
+  word-spacing: normal;
 }
 
 
@@ -73,21 +84,19 @@ input {
   position: relative;
 }
 
-
-
+#textLeft {
+  text-align: left;
+}
 
 h1 {
-  font-family: 'Hind', sans-serif;
   font-size: 50px;
   color: greenyellow;
-
 }
 
 h2 {
-
-  font-family: 'Hind', sans-serif;
   font-size: 30px;
 }
+
 
 
 footer {

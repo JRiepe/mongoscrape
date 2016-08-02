@@ -8,10 +8,10 @@
           
             <form method="post" type="text" action="/addComment/{{id}}"  >
             
-                <div class="textDivs">
+                <div class="textDivs controls">
                       
                     <label>
-                      <input id="comment" name="comment" type="text" placeholder="add your comment!"/>
+                      <textarea class="form-control" id="comment" name="comment" wrap="soft" type="text" placeholder="comment here"></textarea>
                     </label>
                  
                 </div>
@@ -56,10 +56,10 @@
   </div><!-- end Middle Column -->
 
 
-  <div class="col-xs-5 col-md-3 allColumns"> <!-- Right Column -->
+  <div class="col-xs-5 col-md-3"> <!-- Right Column -->
     
             <div class="textDivs">
-                  <p>{{theComment}}</p>
+                  <h5 id="textLeft">{{theComment}}</h5>
             </div>    
 
             <div>
