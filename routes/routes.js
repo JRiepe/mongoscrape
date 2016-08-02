@@ -7,7 +7,7 @@ app.use(bodyParser.text());
 app.use(bodyParser.json({type:'application/vnd.api+json'}));
 app.use(express.static('public'));
 var mongojs = require('mongojs');
-var databaseUrl = "mongoscrape";
+var databaseUrl = "mongodb://heroku_5q88hntj:4ra2fhqg9ape9ojkmh5knhlq05@ds139665.mlab.com:39665/heroku_5q88hntj";
 var collections = ["scrapedData"];
 var db = mongojs(databaseUrl, collections);
 db.on('error', function(err) {
