@@ -34,7 +34,6 @@ app.use(express.static('public'));
 
 // Make a request call to grab the html body from the site of your choice
 
-//db.scrapedData.drop();
 request('http://www.nationalenquirer.com/', function (error, response, html) {
 
             var $ = cheerio.load(html);
@@ -53,7 +52,7 @@ request('http://www.nationalenquirer.com/', function (error, response, html) {
                   }; // end var doc
                 console.log(doc);
                 } // end if
-                
+  // Check for existing document
                 db.scrapedData.find(doc, function (err, found){
                         var foundDocs = found.length;
                         console.log('foundDocs: ' + foundDocs);
@@ -61,6 +60,7 @@ request('http://www.nationalenquirer.com/', function (error, response, html) {
                           console.log(err);
                         }
                         else {
+  // if no existing document found - create new one
                           if (foundDocs == 0) {
                               db.scrapedData.insert(doc, function (err, saved) {
                                       if (err) {
@@ -76,20 +76,13 @@ request('http://www.nationalenquirer.com/', function (error, response, html) {
                         } // end else
                 });
 
-                /*db.scrapedData.insert(doc, function (err, saved) {
-                        if (err) {
-                          console.log(err);
-                        }
-                        else {
-                          console.log(saved);
-                          //res.send('Scrape Complete');
-                          //res.send(saved);
-                        }   
-                }); // end db.scrapedData */
 
             }); // $('article')
 
 }); // end request
+
+
+// opens server to listen
 
 app.listen(PORT, function(){
   console.log('listening on port', PORT)
