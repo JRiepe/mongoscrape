@@ -42,7 +42,8 @@ module.exports = function(app){
 							artSubtitle: found[i].subtitle,
 							theComment: found[i].comment,
 							id: found[i]._id,
-							articleNum: i+1 
+							articleNum: i+1,
+							totalArticles: arrLength 
 						}); // end res.render
 				    }
 				}); //end db.scrapedData.find({},		
