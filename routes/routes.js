@@ -43,7 +43,8 @@ module.exports = function(app){
 							theComment: found[i].comment,
 							id: found[i]._id,
 							articleNum: i+1,
-							totalArticles: arrLength 
+							totalArticles: arrLength,
+							urlLink:  found[i].url
 						}); // end res.render
 				    }
 				}); //end db.scrapedData.find({},		
