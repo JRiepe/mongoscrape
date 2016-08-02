@@ -53,7 +53,7 @@ request('http://www.nationalenquirer.com/', function (error, response, html) {
                 console.log(doc);
                 } // end if
   // Check for existing document
-                db.scrapedData.find(doc, function (err, found){
+                db.scrapedData.find({url: link} , function (err, found){
                         var foundDocs = found.length;
                         console.log('foundDocs: ' + foundDocs);
                         if (err) {
