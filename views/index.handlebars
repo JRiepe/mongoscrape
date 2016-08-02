@@ -1,115 +1,83 @@
 
-  <div id="index-banner" class="parallax-container">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <br><br>
-        
-        <div class="row center">
-        <img src="../images/icLogo.png" alt="IC logo" id="logoimg">
-          <div id="introtext"><h1 class="header col s12 light">Small Business Inventory Management</h1></div>
-        </div>
-        <div class="row center">
-          <!-- <a href="http://materializecss.com/getting-started.html" id="download-button" class="btn-large waves-effect waves-light teal lighten-1">Get Started</a> -->
-        </div>
-        <br><br>
-
-      </div>
-    </div>
-    <div class="parallax"><img src="../images/background1.jpg" alt="Unsplashed background img 1"></div>
-  </div>
-
-
-  <div class="container">
-    <div class="section">
-
-      <!--   Icon Section   -->
-      <div class="row">
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text">
-            <h2 class="center brown-text"><img src="../images/person1.png" alt="Unsplashed background img 1" height="70" width="70">
-            <i class="material-icons">assessment</i>
-            </h2>
-            <h5 class="center">For Small Business</h5>
-
-            <p class="light">We have developed a simple Inventroy management system for the small business person.</p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><img src="../images/person3.png" alt="Unsplashed background img 1" height="70" width="70">
-            <i class="material-icons">list</i>
-            </h2>
-            <h5 class="center">Keeping Track</h5>
-
-            <p class="light">With iControl no business is to small for inventory management. </p>
-          </div>
-        </div>
-
-        <div class="col s12 m4">
-          <div class="icon-block">
-            <h2 class="center brown-text"><img src="../images/person5.png" alt="Unsplashed background img 1" height="70" width="70"> <i class="material-icons">shopping_cart</i></h2>
-            <h5 class="center">Simple to use</h5>
-
-            <p class="light">As a small business owner you wear many hats, so we created a simple user interface.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h1 class="header col s12 light">The only way for you to do Business!</h1>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="../images/background2.jpg" alt="Unsplashed background img 2"></div>
-  </div>
-
-  <div class="container">
-    <div class="section">
-
-      <div class="row">
-        <div class="col s12 center">
-          <h3><i class="mdi-content-send brown-text"></i></h3>
-          <h5>About IControl</h5>
-          <p class="left-align light">At iControl we know and understand small business. Often times software is designed for larger companies with large inventories and often sold as being benefical and applicable to smaller entities. Time for the small business owner is of the essence and dedicating time to learning complex software that was not been designed with small business in mind can simply be a waste of time. The staff here at iControl understand the benefits of inventory managment for large companies. We wanted to create a simplifed Inventory Management System that could integrate with a Point of Sale System, specifically for the small business owner. Easy to integrate into a small business, perfect for planning and expanding. </p>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-
-  <div class="parallax-container valign-wrapper">
-    <div class="section no-pad-bot">
-      <div class="container">
-        <div class="row center">
-          <h1 class="header col s12 light">Be In control with iControl</h1>
-        </div>
-      </div>
-    </div>
-    <div class="parallax"><img src="../images/background3.jpg" alt="Unsplashed background img 3"></div>
-  </div>
-
- 
-  <!-- scripts for templates -->
-  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-  <script src="../js/materialize.js"></script>
-  <script src="../js/init.js"></script>
-  <script src="../js/main.js"></script>
-  <script type="text/javascript">
-      $(document).ready(function(){
-        // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
-        $('#loginSpace').empty();
-        $('#loginSpace').html(loginVar);
-        $('.modal-trigger').leanModal();
-      });  
-  </script>
+<!-- this is index.handlebars -->
+<div class=container>
+<h1>Mongo Scraper</h1>
   
+<div class="row"> <!-- Left Column -->
+  <div class="col-xs-5 col-md-3">
+          
+            <form method="post" type="text" action="/addComment/{{id}}"  >
+            
+                <div class="textDivs">
+                      
+                    <label>
+                      <input id="comment" name="comment" type="text" placeholder="add your comment!"/>
+                    </label>
+                 
+                </div>
+                
+                <div class="buttonDiv">    
+                      <button  class="glyphicon glyphicon-plus" type="submit" value="submit
+                      "></button>
+                </div>
+          
+            </form>
+  </div> <!-- end Left Column -->
+
+
+  <div class="col-xs-8 col-md-6"> <!-- Middle Column -->
+            <div class="textDivs">
+              <h3>Article: {{articleNum}}</h3>
+              <h4>{{artTitle}}</h4>
+              <br>
+              <h5>{{artSubtitle}}</h5>
+            </div>
+                      
+            <div class="buttonDiv">   
+                <tr>
+                    <td>
+                        <form method='GET' action="/lastArticle">
+                            <button id="leftArrow" class="glyphicon glyphicon-arrow-left"></button>
+                        </form>
+                    </td>
+                    <td>
+                        <form method='GET' action="/nextArticle">
+                            <button id="rightArrow" class="glyphicon glyphicon-arrow-right"></button>
+                        </form>
+                    </td>
+                  
+                </tr>
+      
+            </div>
+                              
+  </div><!-- end Middle Column -->
+
+
+  <div class="col-xs-5 col-md-3 allColumns"> <!-- Right Column -->
+    
+            <div class="textDivs">
+                  <p>{{theComment}}</p>
+            </div>    
+
+            <div>
+                <form method='POST' action="/delComment/{{id}}">
+                      
+                      <div class='buttonDiv'>
+                                <button type="submit" id="delComment" name="delComment" class="glyphicon glyphicon-minus"></button>
+                      </div> <!-- end buttonDiv -->
+
+                </form>
+            </div>
+
+  </div> <!-- end Right Column -->
+
+</div> <!-- end container -->
+
+  
+
+<br><br><br>
+<footer>
+  <h6>&#169 Copyright 2016 Grandma's Boy Productions</h6>
+</footer>
+
+
