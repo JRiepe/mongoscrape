@@ -17,7 +17,7 @@ var PORT = process.env.PORT || 8080;
 
 // Database configuration
 var mongojs = require('mongojs');
-var databaseUrl = "mongoscrape";
+var databaseUrl = "mongodb://heroku_5q88hntj:4ra2fhqg9ape9ojkmh5knhlq05@ds139665.mlab.com:39665/heroku_5q88hntj";
 var collections = ["scrapedData"];
 
 // Hook mongojs configuration to the db variable
