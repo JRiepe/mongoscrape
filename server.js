@@ -39,7 +39,7 @@ request('http://www.nationalenquirer.com/', function (error, response, html) {
             var $ = cheerio.load(html);
 
             $('article').each(function(i, element){
-                var title = $(this).text();
+                var title = $(this).find('.promo-title').text();
                 var subtitle = $(this).find('.subtitle').text();
                 var link = $(this).find('a').attr('href');
                 
