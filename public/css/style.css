@@ -36,8 +36,8 @@ html  {
 }
  #commentArea, .artDiv {
   margin: 0 auto;
-  min-height: 220px;
-  max-height: 220px;
+  min-height: 240px;
+  max-height: 240px;
   overflow-x: hidden;
   overflow-y: auto;
   resize: none;
@@ -46,8 +46,8 @@ html  {
 
  textarea {
   margin: 0 auto;
-  min-height: 210px;
-  max-height: 210px;
+  min-height: 230px;
+  max-height: 230px;
   background-color: inherit!important;
   padding: 5px;
   overflow-x: hidden;
