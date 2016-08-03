@@ -1,26 +1,38 @@
 html  {
   background-color: #000000;
   margin: 0 auto;
-
+  
+  
+  background-size: 100%;
 }
 
+.jumbotron  {
+  background-color: #000000;
+  height: auto;
+  color:  yellowgreen;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
 
 .container {
+  
   background-color: #666666;
   text-align: center;
   position: relative;
   margin: 0 auto;
   padding:  0px;
   width: auto;
-  line-height: 0;
   height: auto;
   color: black;
+
 }
 
 .row {
   margin: 0 auto;
   min-height: 300px;
   max-width: 800px;
+  background color: #666666;
+
 }
  
 
@@ -30,7 +42,6 @@ html  {
   max-height: 250px;
   background-color: inherit!important;
   padding: 5px;
-  border-style: none;
   overflow-x: hidden;
   overflow-y: auto;
   resize: none;
@@ -51,11 +62,12 @@ html  {
   border-width: 5px;
   background-color: #F1F1D4;
   color: #000000;
-  word-break: break-all !important;
-  word-wrap: break-word !important;
+  word-break: normal;
+  word-wrap: normal;
   display: block;
-  overflow-x: break-word;
-  word-spacing: normal;
+  overflow-x: wrap;
+  
+  overflow-y: auto;
 }
 
 
@@ -153,19 +165,36 @@ a:active {
     text-decoration: none
 }
 
-@media only screen and (max-width : 992px) {
-  .parallax-container .section {
-    position: absolute;
-    top: 40%;
+
+@media only screen and (min-width: 400px) {
+  .container {
+    margin: 0 auto;
+    max-width: 350;
+    position: relative;
+    text-align: center; 
   }
-  #index-banner .section {
-    top: 10%;
+
+  .textDivs {
+    column-width: 300px;
+
   }
 }
 
-@media only screen and (max-width : 600px) {
-  #index-banner .section {
-    top: 0;
+
+@media only screen and (min-width: 850px) {
+  
+  .container  {
+    max-width: 800;
+    position: relative;
+    
   }
+
+  .textDivs {
+    column-width: auto;
+
+  }
+  
 }
+
+
 

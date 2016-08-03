@@ -1,10 +1,12 @@
 
 <!-- this is index.handlebars -->
 <div class=container>
-<h1>Mongo Scraper</h1>
-<h3>Search the National Enquirer!</h3>
+  <div class="jumbotron">
+        <h1>Mongo Scraper</h1>
+        <h3>Search the National Enquirer!</h3>
+  </div>
 <div class="row"> <!-- Left Column -->
-  <div class="col-xs-5 col-md-3">
+  <div class="col-xs-6 col-md-3">
           
             <form method="post" type="text" action="/addComment/{{id}}"  >
             
@@ -25,7 +27,7 @@
   </div> <!-- end Left Column -->
 
 
-  <div class="col-xs-8 col-md-6"> <!-- Middle Column -->
+  <div class="col-xs-6 col-md-6"> <!-- Middle Column -->
             <div class="textDivs">
               <h3>Article: {{articleNum}} of {{totalArticles}}</h3>
               <h4>{{artTitle}}</h4>
@@ -56,7 +58,7 @@
   </div><!-- end Middle Column -->
 
 
-  <div class="col-xs-5 col-md-3"> <!-- Right Column -->
+  <div class="col-xs-6 col-md-3"> <!-- Right Column -->
     
             <div class="textDivs">
                   <h5 id="textLeft">{{theComment}}</h5>
