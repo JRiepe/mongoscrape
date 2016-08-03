@@ -2,16 +2,16 @@ html  {
   background-color: #000000;
   margin: 0 auto;
   
-  
-  /*background-size: 100%;*/
 }
 
 .jumbotron  {
   background-color: #000000;
+  color: greenyellow;
   height: auto;
-  color:  yellowgreen;
+  
   padding-top: 10px;
   padding-bottom: 10px;
+  
 }
 
 .container {
@@ -24,22 +24,30 @@ html  {
   width: auto;
   height: auto;
   color: black;
-
+  background-image: url('/images/natenq.jpg');
 }
 
 .row {
   margin: 0 auto;
   min-height: 300px;
   max-width: 800px;
-  background color: #666666;
+  background-color: transparent;
 
 }
- 
+ #commentArea, .artDiv {
+  margin: 0 auto;
+  min-height: 220px;
+  max-height: 220px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  resize: none;
+  text-align: center;
+ }
 
  textarea {
   margin: 0 auto;
-  min-height: 250px;
-  max-height: 250px;
+  min-height: 210px;
+  max-height: 210px;
   background-color: inherit!important;
   padding: 5px;
   overflow-x: hidden;
@@ -72,17 +80,17 @@ html  {
 
 
 #leftArrow {
-  position: relative;
+  /* position: relative; */
   float: left;
-  display: inline-block;
+  display: block;
   margin: 0 auto;
   margin-left: 20%;
 }
 
 #rightArrow {
-  position: relative;
+  /*position: relative;*/
   float: right;
-  display: inline-block;
+  display: block;
   margin: 0 auto;
   margin-right: 20%;
 }
@@ -93,7 +101,7 @@ html  {
   margin: 0 auto;
   align-content: center;
   text-align: center;
-  position: relative;
+  position: static;
 }
 
 #textLeft {
@@ -102,11 +110,12 @@ html  {
 
 h1 {
   font-size: 50px;
-  color: greenyellow;
+  
 }
 
 h2 {
   font-size: 30px;
+
 }
 
 
@@ -118,18 +127,23 @@ footer {
   margin: 0 auto;
   text-align: center;
   width: auto;
+
 }
 
    
 
     
 button {
-	background-color:  black;
-  color: greenyellow;
-  width: 50px;
-  height: 25px;
+	position: absolute;
+  bottom: 2px;
+  background-color:  greenyellow;
+  color: #000000;
+  border-style: ridge;
+  border-width: 5px;
+  border-color: black; 
+  width: 70px;
+  height: 30px;
 	margin: 5px;
-  
 }
 
 
