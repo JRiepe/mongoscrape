@@ -61,19 +61,26 @@ module.exports = function(app){
 		app.post('/addComment/:id', function(req, res){
 				console.log('object id: ' + mongojs.ObjectId(req.params.id));
 				console.log('req: ' + req.body.comment);
-				//console.log('comment: ' + req.body.comment);
-				db.scrapedData.update({
-					'_id': mongojs.ObjectId(req.params.id)
-				}, {
-					$set: {
-      					comment: req.body.comment
-    				}
-  				}, 
+				var commentInput = req.body.comment.trim();
+				if (commentInput) {
+						db.scrapedData.update({
+							'_id': mongojs.ObjectId(req.params.id)
+						}, {
+							$set: {
+		      					comment: req.body.comment.trim()
+		    				}
+		  				}, 
 
-				function (err, edited) {
-					if (err) throw error;
-					res.redirect('/');
-				});	 // end db.scrapedData.update 
+						function (err, edited) {
+							if (err) throw error;
+							res.redirect('/');
+						});	 // end db.scrapedData.update 		
+				} // end if
+				
+				else {
+						console.log("It's getting there: &"+commentInput)
+						res.redirect('/');	
+				} // end else
 		}); // end app.post('/addComment/:id'
 
 /////////////////////////////////////////////////////////////////////////
